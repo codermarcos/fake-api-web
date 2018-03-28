@@ -1,0 +1,20 @@
+.sidebar {
+  border-right: 1px solid $c_s_light;
+  box-shadow: 0 -5px 10px 0 $c_black;
+  display: inline-flex;
+  width: $s_w_sidebar;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  transition: .4s transform ease-in, .4s width ease-in;
+
+  &.close{
+    transform: translateX(-100%);
+    width: 0;
+  }
+
+  .main-header__title {
+    border-bottom: 1px solid $c_s_light;
+    padding: $s_p_header;
+  }
+}

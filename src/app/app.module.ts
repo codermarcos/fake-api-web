@@ -6,8 +6,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+
+import { PagesModule } from './pages/index';
 import { AppRoutingModule } from './app-routing.module';
-import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [

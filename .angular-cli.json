@@ -1,16 +1,23 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "fake-api-web",
-    "ejected": true
+    "name": "fake-api-web"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        {
+          "glob": "**/*",
+          "input": "./assets/img",
+          "output": "./img"
+        },
+        {
+          "glob": "favicon.ico",
+          "input": "./",
+          "output": "./"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,16 +26,19 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "serviceWorker": true,
       "styles": [
-        "styles.css"
+        "assets/scss/styles.scss"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": ["styles/variables"]
+      },
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      }
+      },
+      "serviceWorker": true
     }
   ],
   "e2e": {
@@ -56,8 +66,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {
-    }
+    "styleExt": "scss",
+    "component": {}
   }
 }

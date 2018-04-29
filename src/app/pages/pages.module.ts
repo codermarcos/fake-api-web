@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 
-import { IndexComponent } from './index/index';
+import { ComponentsModule } from '../components/index';
+import { RouterComponent } from './router';
+import { HomeComponent } from './home';
 
 @NgModule({
   imports: [
     CommonModule,
+    ComponentsModule,
     PagesRoutingModule
   ],
-  declarations: [IndexComponent]
+  declarations: [HomeComponent, RouterComponent]
 })
 export class PagesModule { }

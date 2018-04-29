@@ -1,0 +1,33 @@
+@import 'colors';
+@import 'sizes';
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  border-right: 1px solid $c_s_light;
+  box-shadow: 0 -5px 10px 0 $c_black;
+  display: inline-flex;
+  width: $s_w_sidebar;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  transition: .4s transform ease-in, .4s width ease-in;
+
+  &.close {
+    transform: translateX(-100%);
+    width: 0;
+  }
+
+  .main-header__title {
+    background-color: $c_b_header;
+    color: $c_c_header;
+    min-width: $s_w_sidebar;
+    font-size: 2em;
+    height: $s_h_header;
+    border-bottom: 1px solid $c_s_light;
+    padding: $s_p_header;
+  }
+}

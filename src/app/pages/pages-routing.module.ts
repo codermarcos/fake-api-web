@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IndexComponent } from './index/index';
+import { RouterComponent } from './router';
+import { HomeComponent } from './home';
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: HomeComponent
+  },
+  {
+    path: 'router',
+    component: RouterComponent
   }
 ];
 

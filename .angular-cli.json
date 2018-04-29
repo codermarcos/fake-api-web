@@ -10,8 +10,18 @@
       "assets": [
         {
           "glob": "**/*",
+          "input": "./assets/icons/my-team/fonts",
+          "output": "./fonts/"
+        },
+        {
+          "glob": "**/*",
           "input": "./assets/img",
           "output": "./img"
+        },
+        {
+          "glob": "**/*",
+          "input": "./assets/i18n",
+          "output": "./i18n/"
         },
         {
           "glob": "favicon.ico",
@@ -30,7 +40,7 @@
         "assets/scss/styles.scss"
       ],
       "stylePreprocessorOptions": {
-        "includePaths": ["styles/variables"]
+        "includePaths": ["assets/scss/variables"]
       },
       "scripts": [],
       "environmentSource": "environments/environment.ts",

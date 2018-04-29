@@ -9,14 +9,14 @@ import { environment } from '../environments/environment';
 
 import { PagesModule } from './pages/index';
 import { AppRoutingModule } from './app-routing.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     PagesModule,
     BrowserModule,
+    ServicesModule,
     AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],

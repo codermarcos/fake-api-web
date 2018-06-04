@@ -1,0 +1,15 @@
+{
+  "teste": {
+    "method": "POST",
+    "status": 200,
+    "body": "",
+    "headers" {}
+  },
+
+  "teste/teastando": {
+    "method": "GET",
+    "status": 200,
+    "body": "",
+    "headers" {}
+  }
+}
